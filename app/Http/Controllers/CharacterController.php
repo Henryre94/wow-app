@@ -14,7 +14,7 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        $characters = Character::latest()->paginate(5);
+        $characters = Character::latest()->paginate(30);
 
         return view('characters.index',compact('characters'))
             ->with(request()->input('page'));
@@ -60,7 +60,7 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        //
+        return view('characters.show', compact('character'));
     }
 
     /**
