@@ -44,9 +44,12 @@
                 <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Submit</button>
             </div>
             <div class="mb-4">
-                <button href{{ route('characters.index') }} class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Return</button>
-            </div>
+                <a href="{{ route('characters.index') }}" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Return</a>
+            </div>  
+
         </form>
+  
+
     </div>
 </div>
 

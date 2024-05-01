@@ -71,7 +71,7 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        //
+        return view('characters.edit', compact('character'));
     }
 
     /**
@@ -83,7 +83,18 @@ class CharacterController extends Controller
      */
     public function update(Request $request, Character $character)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'class' => 'required',
+            'spec' => 'required',
+            'role' => 'required',
+            'core' => 'required',
+        ]);
+
+        $character->update($request->all());
+
+        return redirect()->route('characters.index')
+                        ->with('success','Personaje editado exitosamente');
     }
 
     /**

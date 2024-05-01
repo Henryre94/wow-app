@@ -11,7 +11,9 @@
             <p class="text-lg mb-2"><strong>Especializacion: </strong>{{ $character->spec }}</p>
             <p class="text-lg mb-2"><strong>Role:</strong> {{ $character->role }}</p>
             <p class="text-lg mb-2"><strong>Core:</strong> {{ $character->core }}</p>
-        
+            <div class="mb-4">
+                <a href="{{ route('characters.index') }}" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Return</a>
+            </div>  
         </div>
     </div>
 </div>
