@@ -12,6 +12,12 @@
             <a href="{{ route('characters.create') }}" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Registrar Personaje</a>
         </div>
     </div>
+
+    @if ($message = Session::get('success'))
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <p>{{ $message }}</p>
+    </div>
+    @endif
     
     <table class="min-w-full divide-y divide-gray-200">
         <thead class="bg-gray-50">
